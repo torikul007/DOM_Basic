@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        article{
+            border: 2px solid palegreen;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+    <h1  >  Mouse</h1>
+    <article id=" text1">
+        <h2> Article</h2>
+        <h3 class="author">Author-1 </h3>
+        <p id="articals"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis quibusdam qui adipisci odio amet, deleniti aut pariatur dolor soluta! Vero repellat eveniet velit illo a dicta nostrum ex tenetur.</p>
+    </article>
+    <article>
+        <h2> Article</h2>
+        <h3  class="author">Author-2 </h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis quibusdam qui adipisci odio amet, deleniti aut pariatur dolor soluta! Vero repellat eveniet velit illo a dicta nostrum ex tenetur.</p>
+    </article>
+    <article>
+        <h2 > Article</h2>
+        <h3 class="author">Author-3 </h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis quibusdam qui adipisci odio amet, deleniti aut pariatur dolor soluta! Vero repellat eveniet velit illo a dicta nostrum ex tenetur.</p>
+    </article>
+    <script>
+        var torikul = document.getElementsByClassName('author');
+        for( var i=0; i<torikul.length; i++){
+
+            var element = torikul[i];
+            element.style.backgroundColor ="red";
+            console.log(element.innerHTML);
+            element.innerHTML='Name Change';
+           element.style.marginLeft='25px';
+             element.style.marginRight='1110px';
+             element.style.border='solid black 4px';
+             element.style.borderRadius='10px';
+
+        }
+
+        var quary=document.querySelectorAll('h2');
+        for(var i=0; i<quary.length; i++){
+            var element2= quary[i];
+            element2.style.backgroundColor='red';
+            element2.style.marginLeft='20px';
+             element2.style.marginRight='1150px';
+             element2.style.border='solid black 2px';
+             element2.style.borderRadius='10px';
+        }
+        var element3 = document.querySelector('h1');
+element3.setAttribute('title', 'This is a tooltip text');
+
+
+        const  new1= document.getElementById('text1');
+        const add= document.createElement('p');
+        add.innerHTML='Add by inner JavaScript';
+        new1.appendChild(add);
+
+    </script>
+   
+    
+</body>
+</html>
